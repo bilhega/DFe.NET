@@ -1,3 +1,7 @@
+Biblioteca em C# para geração de NFe
+
+Grupo Skype,solicitar para add via SKYPE => robertoalves18@hotmail.com
+
 [![Build status](https://ci.appveyor.com/api/projects/status/7igb6s48sw2p95o3/branch/master?svg=true)](https://ci.appveyor.com/project/adeniltonbs/zeus-net-nfe-nfce/branch/master) 
 [![Issues](https://img.shields.io/github/issues/ZeusAutomacao/DFe.NET.svg?style=flat-square)](https://github.com/ZeusAutomacao/DFe.NET/issues)
 
@@ -17,11 +21,6 @@
 
 DFe.NET
 =================
-Grupo [Skype](https://join.skype.com/CJbtNPlvbycL) para discussão
-
-Grupo Telegram, solicitar URL via SKYPE => robertoalves18@hotmail.com
-
-Grupo [Discord](https://discord.gg/n7QkAGF) para discussão
 
 Biblioteca gratuita para Geração de NFe 3.10/4.00, NFCe 3.10/4.00, MDF-e 3.0 e CT-e 3.0 e consumo dos serviços necessários à sua manutenção, conforme descritos em http://www.nfe.fazenda.gov.br/portal/principal.aspx, https://mdfe-portal.sefaz.rs.gov.br e www.cte.fazenda.gov.br/portal.
 
@@ -78,7 +77,7 @@ Instale as fontes informadas no PC que for imprimir o DANFE da NFCe_;
 
 **Impressão (.NetCore/.NetStandard):**
 ----------
-- Não existe suporte até o momento para impressão de NFCe.
+- Não existe suporte até o momento para impressão de NFCe (utilize a opção ESC/POS em https://github.com/marcosgerene/Gerene.DFe.EscPos).
 - A impressão da NFe utiliza o FastReport.OpenSource (https://github.com/FastReports/FastReport), sendo ele instalado automatico ao utilizar o pacote nuget do Zeus.
 - A impressão requer que o arquivo .frx seja indicado, ou seja, ao publicar os binarios de seu projeto os arquivos .frx devem estar juntos e passado o caminho do arquivo para que seja gerado a impressão.
 - Até o momento não é suportado a impressão direta na impressora. As saídas suportadas são Stream ou Byte[], sendo elas em PDF, HTML e PNG.

@@ -382,7 +382,7 @@ namespace NFe.AppTeste.NetCore
                     var retornoManifestacao = servicoNFe.RecepcaoEventoManifestacaoDestinatario(idlote: 1,
                                                                                             sequenciaEvento: 1,
                                                                                             chavesNFe: new string[] { chave },
-                                                                                            nFeTipoEventoManifestacaoDestinatario: NFeTipoEvento.TeMdCienciaDaEmissao,
+                                                                                            nFeTipoEventoManifestacaoDestinatario: NFeTipoEvento.TeMdCienciaDaOperacao,
                                                                                             cpfcnpj: _configuracoes.Emitente.CNPJ,
                                                                                             justificativa: null);
 
@@ -416,7 +416,7 @@ namespace NFe.AppTeste.NetCore
                             var retornoManifestacao = servicoNFe.RecepcaoEventoManifestacaoDestinatario(idlote: 1,
                                                                                                     sequenciaEvento: 1,
                                                                                                     chavesNFe: new string[] { chave },
-                                                                                                    nFeTipoEventoManifestacaoDestinatario: NFeTipoEvento.TeMdCienciaDaEmissao,
+                                                                                                    nFeTipoEventoManifestacaoDestinatario: NFeTipoEvento.TeMdCienciaDaOperacao,
                                                                                                     cpfcnpj: _configuracoes.Emitente.CNPJ,
                                                                                                     justificativa: null);
 
@@ -428,12 +428,12 @@ namespace NFe.AppTeste.NetCore
                         }
                     }
 
-                    var retornoNFeDistDFe = servicoNFe.NfeDistDFeInteresse(ufAutor: _configuracoes.Emitente.enderEmit.UF.ToString(), documento: _configuracoes.Emitente.CNPJ, chNFE: chave);
+                    var retornoNFeDistDFe = servicoNFe.NfeDistDFeInteresse(ufAutor: _configuracoes.EnderecoEmitente.UF.ToString(), documento: _configuracoes.Emitente.CNPJ, chNFE: chave);
                     if (retornoNFeDistDFe.Retorno.loteDistDFeInt == null)
                     {
                         await Task.Delay(2000); //https://github.com/ZeusAutomacao/DFe.NET/issues/568#issuecomment-339862458
 
-                        retornoNFeDistDFe = servicoNFe.NfeDistDFeInteresse(ufAutor: _configuracoes.Emitente.enderEmit.UF.ToString(), documento: _configuracoes.Emitente.CNPJ, chNFE: chave);
+                        retornoNFeDistDFe = servicoNFe.NfeDistDFeInteresse(ufAutor: _configuracoes.EnderecoEmitente.UF.ToString(), documento: _configuracoes.Emitente.CNPJ, chNFE: chave);
 
                         if (retornoNFeDistDFe.Retorno.loteDistDFeInt == null)
                             throw new Exception(retornoNFeDistDFe.Retorno.xMotivo);
